@@ -1,0 +1,18 @@
+name   名字: Docker Image CI   名称：Docker 镜像持续集成   名称：Docker 镜像持续集成   名称：Docker 镜像持续集成
+
+on   在:
+  push   推:
+    branches   分支机构: [    分支：   分支：[ "主分支" ][ "主分支" ]"main"   “主要”   “主要” ]
+  pull_request:
+    branches   分支机构: [    分支：   分支：[ "主分支" ][ "主分支" ]"main"   “主要” ]
+
+jobs   工作:
+
+  build   构建:
+
+    runs-on   运行在: ubuntu-latest   运行于：ubuntu-latest   运行于：ubuntu-latest
+
+    steps   步骤:
+    - uses   使用: actions/checkout@v4- 使用：actions/checkout@v4- 使用：actions/checkout@v4
+    - name   名字: Build the Docker image- 名称：构建 Docker 镜像- 名称：构建 Docker 镜像
+      run   运行: docker build . --file Dockerfile --tag my-image-name运行：docker build . --file Dockerfile --tag my-image-name运行：docker build . --file Dockerfile --tag my-image-name:$(date +%s:$(date +%s:$(date +%s)
